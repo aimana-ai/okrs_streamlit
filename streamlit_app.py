@@ -47,7 +47,7 @@ knowledge_base_page = st.Page(
 
 
     # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
-pg = st.navigation(pages = [about_page, chatbot_page, knowledge_base_page, settings_page])
+pg = st.navigation(pages = [about_page, chatbot_page])#, knowledge_base_page, settings_page])
 
     # --- SHARED ON ALL PAGES ---
 st.logo("assets/logo.jpeg")

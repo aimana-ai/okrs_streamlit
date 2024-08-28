@@ -1,24 +1,18 @@
 import streamlit as st
 
-st.title("About AImana")
+st.title("Sobre o Lucas")
 
 col1, col2 = st.columns(2,gap= "small", vertical_alignment="center")
 
+with col1:
+    st.image("assets/okr_expert.png")
+with col2:
+    st.markdown("""
+Lucas é o seu especialista em OKRs (Objetivos e Resultados-Chave), sempre disponível para ajudar você a criar, revisar e entender melhor suas metas. Criado pela AIMANA especialmente para os funcionários do Marista, o Lucas combina conhecimento profundo em OKRs com uma abordagem amigável e acessível.
 
+Seja você um iniciante ou alguém com experiência em OKRs, o Lucas está aqui para responder suas dúvidas, oferecer sugestões personalizadas e guiar você em cada etapa da criação de objetivos alinhados e eficazes. Com Lucas, você terá um apoio constante para garantir que suas metas estejam sempre claras, mensuráveis e impactantes.
 
-st.markdown("""
-At AIMana, we specialize in transforming businesses through the power of automation and artificial intelligence. 
-Our approach is rooted in three core pillars:
-             
-AI First: Emphasizing AI at the forefront of innovation.
-             
-Human-Centered AI: Ensuring AI developments are ethically aligned with human values.
-
-Hyper Automation: Driving efficiency and freeing up human resources for more strategic tasks.
-
-We offer solutions in Intelligent Automation and AI Product development, along with workshops to empower organizations in leveraging AI effectively.
-
-For more information, visit https://aimana.com.br/""")
+Explore todas as funcionalidades do Lucas e veja como ele pode facilitar seu caminho para o sucesso!""")
 
 
 

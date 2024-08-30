@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Create a ChatOpenAI model
-model = ChatOpenAI(model="gpt-4o")#, api_key=st.secrets.openai.OPENAI_API_KEY)
+model = ChatOpenAI(model="gpt-4o", temperature=0)#, api_key=st.secrets.openai.OPENAI_API_KEY)
 
 
 # Define prompt templates (no need for separate Runnable chains)

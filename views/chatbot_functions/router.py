@@ -10,7 +10,7 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 load_dotenv()
 
 # Create a ChatOpenAI model
-model = ChatOpenAI(model="gpt-4o")
+model = ChatOpenAI(model="gpt-4o", temperature=0)
 
 # Define your desired data structure.
 class route(BaseModel):

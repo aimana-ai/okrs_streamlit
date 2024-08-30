@@ -10,7 +10,7 @@ from langchain_core.pydantic_v1 import BaseModel, Field
 load_dotenv()
 
 # Create a ChatOpenAI model
-model = ChatOpenAI(model="gpt-4o")
+model = ChatOpenAI(model="gpt-4o", temperature=0)
 
 # Define your desired data structure.
 class identificator(BaseModel):
@@ -80,17 +80,17 @@ def list_variables(chat_history):
     try:
         objectives = response["objectives"]
     except KeyError:
-        objectives = "No objectives were identified in the conversation."
+        objectives = ["No objectives were identified in the conversation."]
 
     try:
         krs = response["krs"]
     except KeyError:
-        krs = "No key results were identified in the conversation."
+        krs = ["No key results were identified in the conversation."]
 
     try:
         initiatives = response["initiatives"]
     except KeyError:
-        initiatives = "No initiatives were identified in the conversation."
+        initiatives = ["No initiatives were identified in the conversation."]
 
     return str(objectives), str(krs), str(initiatives)
 

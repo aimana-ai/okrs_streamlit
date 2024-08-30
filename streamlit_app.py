@@ -4,7 +4,7 @@ import streamlit_authenticator as stauth
 import yaml
 from streamlit_option_menu import option_menu
 
-
+st.set_page_config(page_title="Chat", page_icon=None, layout="centered", initial_sidebar_state="collapsed", menu_items=None)
 ## REMOVE STREAMLIT HEADER AND FOOTER
 hide_st_style = """
             <style>
@@ -16,20 +16,20 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
-
     
     # --- PAGE SETUP ---
 about_page = st.Page(
     page = "views/about.py",
     title = "Sobre",
     icon = ":material/account_circle:", #https://fonts.google.com/icons
-    default = True
+   
     )
 
 chatbot_page = st.Page(
     page = "views/chatbot.py",
     title = "Chat",
-    icon = ":material/chat:" 
+    icon = ":material/chat:" ,
+    default = True
     )
 
 settings_page = st.Page(

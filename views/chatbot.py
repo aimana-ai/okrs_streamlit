@@ -18,7 +18,7 @@ if "messages" not in st.session_state:
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     # Define the avatar based on the role
-    avatar = "assets/okr_expert.png" if message["role"] == "assistant" else ":material/person:"
+    avatar = "assets/Lucas_face.jpeg" if message["role"] == "assistant" else ":material/person:"
     
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
@@ -32,7 +32,7 @@ if prompt := st.chat_input("Como posso te ajudar hoje?"):
         st.markdown(prompt)
 
     # Display assistant response in chat message container
-    with st.chat_message("assistant", avatar="assets/okr_expert.png"):
+    with st.chat_message("assistant", avatar="assets/Lucas_face.jpeg"):
         message_placeholder = st.empty()
         message_placeholder.text("Digitando...")
         try:

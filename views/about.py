@@ -5,7 +5,7 @@ st.title("Sobre o Lucas")
 col1, col2 = st.columns(2,gap= "small", vertical_alignment="center")
 
 with col1:
-    st.image("assets/okr_expert.png")
+    st.image("assets/lucas.jpeg")
 with col2:
     st.markdown("""
 Lucas é o seu especialista em OKRs (Objetivos e Resultados-Chave), sempre disponível para ajudar você a criar, revisar e entender melhor suas metas. Criado pela AIMANA especialmente para os funcionários do Marista, o Lucas combina conhecimento profundo em OKRs com uma abordagem amigável e acessível.

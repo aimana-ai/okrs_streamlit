@@ -66,8 +66,17 @@ chain = prompt_template | model | parser
 def summarize_convo(query, messages):
     messages = messages
     response = chain.invoke({"last_utterance": query, "chat_history": messages})
-    main_topics = response["main_topics"]
-    last_message = response["last_message"]
-    context = response["context"]
+    try:
+        main_topics = response["main_topics"]
+    except:
+        main_topics = "None"
+    try:
+        last_message = response["last_message"]
+    except:
+        last_message = "None"
+    try:
+        context = response["context"]
+    except:
+        context = "None"
     return str(main_topics), str(last_message), str(context)
 

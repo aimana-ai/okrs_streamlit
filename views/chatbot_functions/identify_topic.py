@@ -78,6 +78,12 @@ chain = prompt_template | model | parser
 
 def identify_topic(query):
     response = chain.invoke({ "last_utterance": query})
-    classification = response["classification"]
-    justification = response["justification"]
+    try:
+        classification = response["classification"]
+    except:
+        classification = "No classification found"
+    try:
+        justification = response["justification"]
+    except:
+        justification = "No justification found"
     return str(classification), str(justification)

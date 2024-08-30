@@ -73,14 +73,15 @@ chain = prompt_template | model | parser
 
 def validator(chat_history, assistant_response):
     response = chain.invoke({"conversation_memory": chat_history , "assistant_response": assistant_response})
-    validation = response["output"]
-    validation_justification = response["justification"]
+    try:
+        validation = response["output"]
+    except:
+        validation = "None"
+    try:
+        validation_justification = response["justification"]
+    except:
+        validation_justification = "None"
 
     return str(validation), str(validation_justification)
 
 
-# Run the function with sample data
-val , jus = validator("The user wants to expand the company's market presence in Europe.", "Achieve 20% market share in Europe")
-
-print(val)
-print(jus)

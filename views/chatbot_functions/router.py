@@ -86,7 +86,17 @@ chain = prompt_template | model | parser
 
 def router(query, main_topics, context):
     response = chain.invoke({"main_topics": main_topics , "last_utterance": query, "context": context})
-    conversation_phase = response["conversation_phase"]
-    description = response["description"]
-    suggested_action = response["suggested_action"]
+    try:
+        conversation_phase = response["conversation_phase"]
+    except:
+        conversation_phase = "No conversation phase found"
+    try:
+        description = response["description"]
+    except:
+         description = "No description found"
+    try:
+        suggested_action = response["suggested_action"]
+    except:
+         suggested_action = "No suggested action found"
+    
     return str(conversation_phase), str(description), str(suggested_action)

@@ -33,10 +33,13 @@ if prompt := st.chat_input("Como posso te ajudar hoje?"):
 
     # Display assistant response in chat message container
     with st.chat_message("assistant", avatar="assets/okr_expert.png"):
+        message_placeholder = st.empty()
+        message_placeholder.text("Digitando...")
         try:
             response = response_generator(prompt,st.session_state.messages)  # Get the assistant's response
         except Exception as e:
             response = f"Desculpe, o limite de solicitações da API foi atingido. Por favor, renove sua assinatura."
+        message_placeholder.empty()
         # Stream the response word by word
         response_container = st.empty()
         complete_string = ""

@@ -38,7 +38,8 @@ if prompt := st.chat_input("Como posso te ajudar hoje?"):
         try:
             response = response_generator(prompt,st.session_state.messages)  # Get the assistant's response
         except Exception as e:
-            response = f"Desculpe, o limite de solicitações da API foi atingido. Por favor, renove sua assinatura."
+            # Display the error message
+            response = f"Desculpe, algo deu errado. {e}"
         message_placeholder.empty()
         # Stream the response word by word
         response_container = st.empty()

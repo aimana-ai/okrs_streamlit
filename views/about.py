@@ -12,7 +12,7 @@ Lucas é o seu especialista em OKRs (Objetivos e Resultados-Chave), sempre dispo
 
 Seja você um iniciante ou alguém com experiência em OKRs, o Lucas está aqui para responder suas dúvidas, oferecer sugestões personalizadas e guiar você em cada etapa da criação de objetivos alinhados e eficazes. Com Lucas, você terá um apoio constante para garantir que suas metas estejam sempre claras, mensuráveis e impactantes.
 
-Explore todas as funcionalidades do Lucas e veja como ele pode facilitar seu caminho para o sucesso!""")
+Explore todas as habilidades do Lucas e veja como ele pode facilitar seu caminho para o sucesso!""")
 
 
 

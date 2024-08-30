@@ -40,7 +40,7 @@ if prompt := st.chat_input("Como posso te ajudar hoje?"):
         except Exception as e:
             # Display the error message
             response = f"Desculpe, algo deu errado. {e}. Por favor, reinicie a conversa."
-        message_placeholder= st.empty()
+        message_placeholder.empty()
         # Stream the response word by word
         response_container = st.empty()
         complete_string = ""

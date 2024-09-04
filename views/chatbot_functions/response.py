@@ -88,11 +88,11 @@ chain = prompt_template | model | StrOutputParser()
 
 
 def response_generator(query, messages):
-    main_topics,last_message, context  = summarize_convo(query, messages)
-    conversation_phase, description, suggested_action = router(query, main_topics, context)
-    classification, justification = identify_topic(query)
-    objectives, krs, iniciatives = list_variables(messages)
-    response = chain.invoke({"last_utterance": query,
+   main_topics,last_message, context  = summarize_convo(query, messages)
+   conversation_phase, description, suggested_action = router(query, main_topics, context)
+   classification, justification = identify_topic(query)
+   objectives, krs, iniciatives = list_variables(messages)
+   response = chain.invoke({"last_utterance": query,
                               "main_topics": main_topics,
                               "context": context, 
                               "conversation_phase": conversation_phase,
@@ -106,8 +106,8 @@ def response_generator(query, messages):
                               "validation": None,
                               "validation_justification": None
                               })
-    val , jus = validator(messages, response)
-    if val == "No":
+   val , jus = validator(messages, response)
+   if val == "No":
             response = chain.invoke({"last_utterance": query,
                               "main_topics": main_topics,
                               "context": context, 
@@ -122,11 +122,11 @@ def response_generator(query, messages):
                               "validation": val,
                               "validation_justification": jus
                               })
-    try:
+   try:
        final_response = translate_answer(response)
-    except:
+   except:
          final_response = "Poderia repetir a pergunta? Não consegui entender."
-    return str(final_response)
+   return str(final_response)
 
 
 

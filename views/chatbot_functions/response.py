@@ -123,9 +123,9 @@ def response_generator(query, messages):
                               "validation_justification": jus
                               })
     try:
-        final_response = response["response"]
+       final_response = translate_answer(response)
     except:
-        final_response = "Pode repetir a pergunta? Não consegui entender"
+         final_response = "Poderia repetir a pergunta? Não consegui entender."
     return str(final_response)
 
 

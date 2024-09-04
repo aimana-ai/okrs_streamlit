@@ -122,7 +122,10 @@ def response_generator(query, messages):
                               "validation": val,
                               "validation_justification": jus
                               })
-    final_response = translate_answer(response)
+    try:
+        final_response = response["response"]
+    except:
+        final_response = "Pode repetir a pergunta? Não consegui entender"
     return str(final_response)
 
 
